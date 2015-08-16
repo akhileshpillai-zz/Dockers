@@ -1,0 +1,9 @@
+hadoop: 
+  image: sequenceiq/hadoop-docker:2.7.0 
+  hostname: hadoop
+flume:
+    build: .
+    hostname: flume
+    links:
+      - hadoop
+
